@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xcelerate Joomla Modules Installation Guide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Xcelerate Joomla Modules</a>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Xcelerate Joomla Modules Installation Guide</h1>
+            <p class="lead">Step-by-step instructions to install and configure your joomla module</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h2>Steps to Install</h2>
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item">If you haven't bought a license yet for the module, make sure to do it on <a href="index.html">main page</a>. You'll need the license key to activate the module</li>
+            <li class="list-group-item">
+                Download the module from <a href="https://github.com/oumarkb/cms-modules-downloads/tree/15de526b267c1fc9b1fd50fc74dec28149cfc14d/downloads">this repository</a>. (Make sure to take to last version)</li>
+            <li class="list-group-item">
+                Go to your Joomla admin panel, navigate to <strong>System</strong> &gt; <strong>Install</strong> &gt; <strong>Extensions</strong>.
+                <img src="assets/admin-panel-system-install-extensions.png" alt="Joomla Admin Panel System" class="img-fluid mt-2">
+            </li>
+            <li class="list-group-item">Drag and drop or browse to the zip module you downloaded to install it
+                <img src="assets/admin-panel-install-extensions.png" alt="Joomla Admin Panel Extensions Installation" class="img-fluid mt-2">
+            </li>
+            <li class="list-group-item">
+                Navigate to <strong>Content</strong> &gt; <strong>Site Modules</strong>, search the module and click on it
+                <img src="assets/admin-panel-search-module.png" alt="Joomla Admin Panel Modules" class="img-fluid mt-2">
+                <ul>
+                    <li> 
+                        On <strong>Module</strong> tab, make sure have the <i>Position</i> and <i>Status</i> set to your preference.
+                        <img src="assets/admin-panel-module-settings.png" alt="Joomla Admin Panel Module Settings" class="img-fluid mt-2">
+                    </li>
+                    <li>
+                        On <strong>Menu Assignment</strong> tab, make sure to select the menu items where you want the module to appear.
+                        <img src="assets/admin-panel-module-menu-assignment.png" alt="Joomla Admin Panel Module Menu Assignment" class="img-fluid mt-2">
+                    </li>
+                    <li>
+                        On <strong>Module Configuration</strong> tab, fill in the required fields, save and close.
+                        <span>The same license key can't be used on multiple domains. Make sure to use the correct one.
+                        </span>
+                        <img src="assets/admin-panel-module-configuration.png" alt="Joomla Admin Panel Module Configuration" class="img-fluid mt-2">
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p> You should now see the module displayed on the concerning pages</p>
+        <p class="mt-4">
+            <a href="../" class="btn btn-outline-secondary">Back to Home</a>
+        </p>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Xcelerate. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
