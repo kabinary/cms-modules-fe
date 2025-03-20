@@ -1,10 +1,18 @@
-<div class="flex flex-col sm:flex-row items-center justify-center p-3 sm:p-5 gap-5">
-  <stripe-buy-button name="Member Directory Module - 1 Year License"
-    buy-button-id="buy_btn_1QZ8qlBgicyppdMnkYmIwoaG"
-    publishable-key="pk_live_51QXhv3BgicyppdMnxCdkl3j8Sz64VJ7W3ttETo2kxU6QAxgGwK2uVYEVLLYoQ2oI47Uku0spvHH4r7ghMPleu1FG00t9WJA4uk">
-  </stripe-buy-button>
-  <stripe-buy-button name="Member Directory Module - 1 Week Free Trial License"
-    buy-button-id="buy_btn_1Qb5Z8BgicyppdMnyhJac7bV"
-    publishable-key="pk_live_51QXhv3BgicyppdMnxCdkl3j8Sz64VJ7W3ttETo2kxU6QAxgGwK2uVYEVLLYoQ2oI47Uku0spvHH4r7ghMPleu1FG00t9WJA4uk">
-  </stripe-buy-button>
+<div class="flex flex-col gap-10 p-5 sm:p-10">
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+    <stripe-buy-button name="Member Directory Module - 1 Year License"
+      buy-button-id="buy_btn_1QZ8qlBgicyppdMnkYmIwoaG"
+      publishable-key="pk_live_51QXhv3BgicyppdMnxCdkl3j8Sz64VJ7W3ttETo2kxU6QAxgGwK2uVYEVLLYoQ2oI47Uku0spvHH4r7ghMPleu1FG00t9WJA4uk">
+    </stripe-buy-button>
+    <stripe-buy-button name="Member Directory Module - 1 Week Free Trial License"
+      buy-button-id="buy_btn_1Qb5Z8BgicyppdMnyhJac7bV"
+      publishable-key="pk_live_51QXhv3BgicyppdMnxCdkl3j8Sz64VJ7W3ttETo2kxU6QAxgGwK2uVYEVLLYoQ2oI47Uku0spvHH4r7ghMPleu1FG00t9WJA4uk">
+    </stripe-buy-button>
+  </div>
+
+  <div class="mt-8 flex items-center justify-center gap-5">
+    <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
+    <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" [type]="'Blue'" [text]="'Demo'"></app-button>  
+    <app-button [routerLink]="'/' + appRoutes.MODULE_INSTALLATION_GUIDE" [type]="'Green'" [text]="'Installation Guide'"></app-button>
+  </div>
 </div>

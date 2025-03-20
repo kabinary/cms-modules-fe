@@ -1,0 +1,11 @@
+<button 
+  class="px-4 py-2 text-white rounded transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50 shadow-md hover:shadow-lg active:scale-95"
+  [ngClass]="{
+    'bg-gray-200 !text-black hover:bg-gray-300 focus:ring-gray-400': type === 'Gray',
+    'bg-blue-600  hover:bg-blue-700 focus:ring-blue-400': type === 'Blue',
+    'bg-green-600  hover:bg-green-700 focus:ring-green-400': type === 'Green'
+  }">
+  <span class="inline-flex items-center">
+    {{ text }}
+  </span>
+</button>

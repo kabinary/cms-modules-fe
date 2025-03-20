@@ -4,26 +4,12 @@
     [alt]="module?.imageAlt" 
     class="w-full h-48 object-cover">
     <div class="p-4">
-    <h2 class="text-xl font-semibold">{{module?.title}}</h2>
-    <p class="mt-2 text-gray-700">{{module?.description}}</p>
-    <!-- <p class="mt-2 text-sm text-gray-500">Price: €{{module?.price}}</p> -->
-    <div class="mt-4 gap-3 flex items-center">
-        <a 
-        [href]="module?.buylink" 
-        class="bg-green-500 hover:bg-green-600 text-white text-sm font-medium py-2 px-4 rounded">
-        Get a license
-        </a>
-        <a 
-        [href]="module?.demoLink" 
-        class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded">
-        Demo
-        </a>
-        <a 
-        [href]="module?.installationGuideLink" 
-        class="bg-gray-500 hover:bg-gray-600 text-white text-sm font-medium py-2 px-4 rounded">
-        Installation Guide
-        </a>
-        
-    </div>
+        <h2 class="text-xl font-semibold">{{module?.title}}</h2>
+        <p class="mt-2 text-gray-700">{{module?.description}}</p>
+        <div class="mt-4 gap-3 flex items-center">
+            <app-button [routerLink]="'/' +module?.buylink" [type]="'Green'" [text]="'Get a License'"></app-button>
+            <app-button [routerLink]="'/' + module?.demoLink" [type]="'Blue'" [text]="'Demo'"></app-button>  
+            <app-button [routerLink]="'/' +module?.installationGuideLink" [type]="'Gray'" [text]="'Installation Guide'"></app-button>
+        </div>
     </div>
 </div>

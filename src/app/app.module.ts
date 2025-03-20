@@ -10,6 +10,7 @@ import { ModuleCardComponent } from './components/module-card/module-card.compon
 import { MemberDirectoryModuleDemoComponent } from './components/member-directory-module-demo/member-directory-module-demo.component';
 import { ModuleInstallationGuideComponent } from './components/module-installation-guide/module-installation-guide.component';
 import { MemberDirectoryModuleLicenseComponent } from './components/member-directory-module-license/member-directory-module-license.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MemberDirectoryModuleLicenseComponent } from './components/member-direc
     ModuleCardComponent,
     MemberDirectoryModuleDemoComponent,
     ModuleInstallationGuideComponent,
-    MemberDirectoryModuleLicenseComponent
+    MemberDirectoryModuleLicenseComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

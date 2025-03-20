@@ -41,7 +41,9 @@
         </li>
     </ol>
     <p class="mt-6 text-center">You should now see the module displayed on the concerning pages.</p>
-    <div class="mt-4 text-center">
-        <a [href]="appRoutes.HOME" lass="bg-gray-200 text-gray-800 px-4 py-2 rounded">Back to Home</a>
+    <div class="mt-8 flex  items-center justify-center gap-5">
+        <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
+        <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" [type]="'Blue'" [text]="'Demo'"></app-button>  
+        <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" [type]="'Green'" [text]="'Get a License'"></app-button>
     </div>
 </main>

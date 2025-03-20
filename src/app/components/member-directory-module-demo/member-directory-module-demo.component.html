@@ -17,12 +17,11 @@
         <li><strong>Integrated Statistics:</strong> Display the total number of users for an instant overview.</li>
     </ul>
 
-    
-    <p class="mt-8 flex justify-center space-x-4">
-        <a [href]="appRoutes.HOME" class="bg-gray-200 text-gray-800 px-4 py-2 rounded">Back to Home</a>
-        <a [href]="appRoutes.MODULE_INSTALLATION_GUIDE" class="bg-blue-600 text-white px-4 py-2 rounded">Installation Guide</a>
-        <a [href]="appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="bg-green-600 text-white px-4 py-2 rounded">Get a License</a>
-    </p>
+    <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-center gap-5">
+        <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
+        <app-button [routerLink]="'/' + appRoutes.MODULE_INSTALLATION_GUIDE" [type]="'Blue'" [text]="'Installation Guide'"></app-button>  
+        <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" [type]="'Green'" [text]="'Get a License'"></app-button>
+    </div>
 </main>
 
 

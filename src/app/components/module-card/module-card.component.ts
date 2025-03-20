@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Module } from '../../models/Module';
+import { AppRoutes } from '../../enums/AppRoutes.enum';
 
 @Component({
   selector: 'app-module-card',
