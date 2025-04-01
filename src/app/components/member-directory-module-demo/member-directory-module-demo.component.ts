@@ -10,4 +10,9 @@ import { AppRoutes } from '../../enums/AppRoutes.enum';
 })
 export class MemberDirectoryModuleDemoComponent {
   appRoutes: typeof AppRoutes = AppRoutes;
+  openFaq: number | null = null;
+
+  toggleFaq(faqId: number): void {
+    this.openFaq = this.openFaq === faqId ? null : faqId;
+  }
 }

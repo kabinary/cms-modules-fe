@@ -1,5 +1,3 @@
-
-
 <main class="container mx-auto py-8">
     <p class="text-gray-600">Below is a live example of the module in action.</p>
     <div class="flex w-full justify-center py-5">
@@ -7,7 +5,7 @@
     </div>
     
     <h2 class="text-2xl font-bold mt-8">Module Description</h2>
-    <p class="mt-4">This module is designed to display a clear and modern directory of registered members on your website. It’s perfect for communities, associations, or any site that requires a professional presentation of its members.</p>
+    <p class="mt-4">This module is designed to display a clear and modern directory of registered members on your website. It's perfect for communities, associations, or any site that requires a professional presentation of its members.</p>
     
     <h3 class="text-xl font-semibold mt-6">Key Features:</h3>
     <ul class="list-disc list-inside mt-4">
@@ -16,6 +14,51 @@
         <li><strong>Comprehensive Member Details:</strong> Each member is displayed with their name, email, phone number, address, and region.</li>
         <li><strong>Integrated Statistics:</strong> Display the total number of users for an instant overview.</li>
     </ul>
+
+    <h2 class="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+    <div class="mt-6 space-y-4">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button (click)="toggleFaq(1)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                <h3 class="text-xl font-semibold">How do I update a member's information?</h3>
+                <svg [class.transform]="openFaq === 1" [class.rotate-180]="openFaq === 1" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div *ngIf="openFaq === 1" class="px-6 pb-6">
+                <p class="text-gray-700">To update a member's information, follow these steps:</p>
+                <ol class="list-decimal list-inside mt-2 space-y-2 text-gray-700">
+                    <li>Log in to your Joomla admin panel</li>
+                    <li>Set up the User Profile fields:
+                        <ul class="list-disc list-inside ml-6 mt-2">
+                            <li>Navigate to System > Plugins</li>
+                            <li>Search for "User - Profile" (this is a built-in Joomla plugin)</li>
+                            <li>Enable the plugin by clicking its status icon</li>
+                            <li>Click on the plugin name to configure the profile fields:
+                                <ul class="list-disc list-inside ml-6 mt-2">
+                                    <li>Set each field as Optional, Required, or Disabled based on your needs</li>
+                                    <li>Save your configuration</li>
+                                </ul>
+                            </li>
+                            <li>These fields will now appear in the user registration form and profile editing page</li>
+                        </ul>
+                    </li>
+                    <li>To update a specific member's information:
+                        <ul class="list-disc list-inside ml-6 mt-2">
+                            <li>Go to Users > Manage</li>
+                            <li>Find and click on the user you want to update</li>
+                            <li>You'll find their information in two sections:
+                                <ul class="list-disc list-inside ml-6 mt-2">
+                                    <li><strong>Account Details:</strong> Basic information (username, name, email)</li>
+                                    <li><strong>User Profile:</strong> Additional information (address, phone, etc.)</li>
+                                </ul>
+                            </li>
+                            <li>Make your changes and click "Save"</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
 
     <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-center gap-5">
         <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
