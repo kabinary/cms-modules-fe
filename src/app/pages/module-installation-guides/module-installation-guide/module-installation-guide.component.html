@@ -1,0 +1,56 @@
+<div class="flex flex-col gap-3">
+    <app-collapsible-panel [title]="'Install your ' + moduleName +  ' module'">  
+        <main class="container mx-auto py-10">
+            <ol class="list-decimal list-inside bg-white shadow-md rounded-lg p-6 space-y-4">
+                <li >
+                    If you haven't bought a license yet for the {{moduleName}} module, make sure to do it on 
+                    <a [href]="appRoutes.HOME" class="text-blue-500 hover:underline">main page</a>. 
+                    You'll need the license key to activate the module.
+                </li>
+                <li >
+                    If you haven't downloaded the {{moduleName}} module from <a class="anchor" [href]="joomlaExtensionsDirectoryUrl">Joomla Extensions Directory</a> yet, do it on 
+                    <a [href]="modulesDownloadsRepository" class="text-blue-500 hover:underline">this repository</a>. 
+                    (Make sure to take the last version)
+                    <ul class="list-disc list-inside">
+                        <li class="bg-gray-100 p-4 rounded-md">
+                            Once the module downloaded, go to your Joomla admin panel, navigate to 
+                            <strong>System</strong> &gt; <strong>Install</strong> &gt; <strong>Extensions</strong>.
+                            <img src="img/joomla-admin-panel/system-install-extensions.png" alt="Joomla Admin Panel System" class="img-fluid mt-4 rounded-md shadow-md">
+                        </li>
+                        <li class="bg-gray-100 p-4 rounded-md">
+                            Drag and drop or browse to the zip module you downloaded to install it.
+                            <img src="img/joomla-admin-panel/install-extensions.png" alt="Joomla Admin Panel Extensions Installation" class="img-fluid mt-4 rounded-md shadow-md">
+                        </li>
+                    </ul>                    
+                </li>             
+                <li>
+                    Navigate to <strong>Content</strong> &gt; <strong>Site Modules</strong>, search the module and click on it.
+                    <img src="img/joomla-admin-panel/search-module.png" alt="Joomla Admin Panel Modules" class="img-fluid mt-4 rounded-md shadow-md">
+                    <ul class="list-disc list-inside mt-4 space-y-4">
+                        <li class="bg-gray-50 p-4 rounded-md">
+                            On <strong>Module</strong> tab, make sure to have the <i>Position</i> and <i>Status</i> set to your preference.
+                            <img src="img/joomla-admin-panel/module-settings.png" alt="Joomla Admin Panel Module Settings" class="img-fluid mt-2 rounded-md shadow-md">
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-md">
+                            On <strong>Menu Assignment</strong> tab, make sure to select the menu items where you want the module to appear.
+                            <img src="img/joomla-admin-panel/module-menu-assignment.png" alt="Joomla Admin Panel Module Menu Assignment" class="img-fluid mt-2 rounded-md shadow-md">
+                        </li>
+                        <li class="bg-gray-50 p-4 rounded-md">
+                            On <strong>Subscription</strong> tab, fill in the required fields.
+                            <img src="img/joomla-admin-panel/module-subscription.png" alt="Joomla Admin Panel Module Subscription" class="img-fluid mt-2 rounded-md shadow-md">
+                        </li>
+                        <li>
+                            Click on <strong>Save & Close</strong> button to save your changes.
+                        </li>                    
+                    </ul>
+                </li>
+            </ol>
+        </main>      
+    </app-collapsible-panel>
+    <ng-content></ng-content>
+    <div class="mt-8 flex  items-center justify-center gap-5">
+        <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
+        <app-button [routerLink]="'/' + moduleDemoRoute" [type]="'Blue'" [text]="'Demo'"></app-button>  
+        <app-button [routerLink]="'/' + moduleLicenseRoute" [type]="'Green'" [text]="'Get a License'"></app-button>
+    </div>
+</div>
