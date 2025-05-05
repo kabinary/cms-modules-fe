@@ -12,7 +12,7 @@ export class ModuleInstallationGuideComponent {
   @Input() moduleName: string = 'Xcelerate';
   @Input() moduleDemoRoute: string = "";
   @Input() moduleLicenseRoute: string = "";
-  modulesDownloadsRepository: string = "https://github.com/oumarkb/cms-modules-downloads/tree/15de526b267c1fc9b1fd50fc74dec28149cfc14d/downloads";
+  modulesDownloadsRepository: string = "https://github.com/oumarkb/cms-modules-downloads/tree/main/downloads";
   
   appRoutes: typeof AppRoutes = AppRoutes;
   joomlaExtensionsDirectoryUrl: string = "https://extensions.joomla.org";
