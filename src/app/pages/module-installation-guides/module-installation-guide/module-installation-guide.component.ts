@@ -9,7 +9,7 @@ import { AppRoutes } from '../../../enums/AppRoutes.enum';
   styleUrl: './module-installation-guide.component.css'
 })
 export class ModuleInstallationGuideComponent {
-  @Input() moduleName: string = 'Xcelerate';
+  @Input() moduleName: string = 'Kabinary';
   @Input() moduleDemoRoute: string = "";
   @Input() moduleLicenseRoute: string = "";
   modulesDownloadsRepository: string = "https://github.com/oumarkb/cms-modules-downloads/tree/main/downloads";
