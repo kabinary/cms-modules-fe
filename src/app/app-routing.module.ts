@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: '', redirectTo: AppRoutes.HOME, pathMatch: 'full' }, 
   {path : AppRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE, component : MemberDirectoryInstalationGuideComponent},
   {path : AppRoutes.MEMBER_DIRECTORY_MODULE_DEMO, component : MemberDirectoryModuleDemoComponent},
-  {path : AppRoutes.MEMBER_DIRECTORY_MODULE_LICENSE, component : MemberDirectoryModuleLicenseComponent}
+  {path : AppRoutes.MEMBER_DIRECTORY_MODULE_LICENSE, component : MemberDirectoryModuleLicenseComponent},
+  { path: '**', redirectTo: AppRoutes.HOME }
 ];
 
 @NgModule({
