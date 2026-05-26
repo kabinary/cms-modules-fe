@@ -1,13 +1,95 @@
-<div class="flex flex-col gap-5">
-    <div class="container mx-auto text-center">
-        <h1 class="text-3xl font-bold">Welcome to Our Joomla Modules Library</h1>
-        <p class="text-lg mt-2">Find demos and installation guides for all our modules.</p>
+<!-- HERO -->
+<section class="band band-soft">
+  <div class="container-x grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
+    <div class="flex flex-col gap-6 max-w-xl">
+      <span class="eyebrow">Premium Joomla extensions</span>
+      <h1 class="text-display">
+        Joomla modules <span class="accent">built to last</span>.
+      </h1>
+      <p class="text-lede">
+        Multilingual, RTL-ready, customizable modules for serious Joomla websites. Designed by integrators who use them every day.
+      </p>
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a href="#modules" class="btn btn-primary btn-lg">Browse modules</a>
+        <a href="#why-kabinary" class="btn btn-ghost btn-lg">Why Kabinary</a>
+      </div>
+      <p class="text-caption pt-1">Free trial · Cancel anytime · Built for production.</p>
     </div>
-    
-    <main class="container mx-auto py-6">
-        <div *ngFor="let module of modules" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <app-module-card [module]="module"></app-module-card>
-        </div>
-    </main>    
-</div>
 
+    <div class="hidden lg:flex justify-center items-center">
+      <div class="relative">
+        <div class="absolute -inset-8 bg-indigo-100 rounded-card blur-2xl opacity-60"></div>
+        <div class="relative card card-elevated p-2 bg-white">
+          <img src="img/member-directory-module/member-directory-desktop-01.png"
+               alt="Member Directory preview"
+               appZoomable
+               class="rounded-[10px] w-full max-w-md">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES GRID -->
+<section id="modules" class="band">
+  <div class="container-x flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-2xl">
+      <span class="eyebrow">Module library</span>
+      <h2 class="text-h1">Pick a module, ship in minutes.</h2>
+      <p class="text-lede">Each module ships with a demo, an installation guide, and a license you can trial for a month.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <app-module-card *ngFor="let module of modules" [module]="module"></app-module-card>
+    </div>
+  </div>
+</section>
+
+<!-- WHY KABINARY -->
+<section id="why-kabinary" class="band band-dark">
+  <div class="container-x flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-2xl">
+      <span class="eyebrow text-white/70">Why Kabinary</span>
+      <h2 class="text-h1 text-white">Crafted for integrators who care.</h2>
+      <p class="text-lede text-white/70">No bloat, no surprises. Modules that fit Joomla's grain and the realities of multilingual production sites.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="rounded-card border border-white/10 bg-white/[0.06] backdrop-blur-sm p-6 flex flex-col gap-3">
+        <div class="inline-flex h-10 w-10 items-center justify-center rounded-btn bg-white/10 text-signal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20"/><path d="M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3 class="text-h3 text-white">Multilingual first</h3>
+        <p class="text-body text-white/75">Native Joomla language layers, fallbacks, and RTL layouts handled out of the box.</p>
+      </div>
+
+      <div class="rounded-card border border-white/10 bg-white/[0.06] backdrop-blur-sm p-6 flex flex-col gap-3">
+        <div class="inline-flex h-10 w-10 items-center justify-center rounded-btn bg-white/10 text-signal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3 class="text-h3 text-white">Custom fields ready</h3>
+        <p class="text-body text-white/75">Plays nicely with Joomla user profile fields and lets you map exactly what you need.</p>
+      </div>
+
+      <div class="rounded-card border border-white/10 bg-white/[0.06] backdrop-blur-sm p-6 flex flex-col gap-3">
+        <div class="inline-flex h-10 w-10 items-center justify-center rounded-btn bg-white/10 text-signal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3l-9 9"/><path d="M15 3h6v6"/></svg>
+        </div>
+        <h3 class="text-h3 text-white">Production grade</h3>
+        <p class="text-body text-white/75">Used daily on real client sites. Updates ship through standard Joomla extension flows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="band band-soft-2">
+  <div class="container-x flex flex-col items-center gap-6 text-center max-w-2xl mx-auto">
+    <span class="eyebrow">Get started</span>
+    <h2 class="text-h1">Need help installing your module?</h2>
+    <p class="text-lede">Each module ships with a step-by-step installation guide and screenshots.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="btn btn-primary btn-lg">Read the installation guide</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="btn btn-ghost btn-lg">See pricing</a>
+    </div>
+  </div>
+</section>

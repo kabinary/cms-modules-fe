@@ -1,6 +1,37 @@
-<footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto text-center">
-      <p>&copy; {{currentYear}} Kabinary LLC. All Rights Reserved.</p>
-      <p>Contact us at <a [href]="'mailto:' + contactEmail" class="text-blue-400">{{contactEmail}}</a></p>
+<footer class="bg-indigo-950 text-white/75">
+  <div class="container-x py-14">
+    <div class="grid gap-10 md:grid-cols-2 items-start">
+      <div class="flex flex-col gap-4 max-w-md">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-card bg-white text-indigo-600 font-semibold text-base">K</span>
+          <span class="font-semibold text-[17px] text-white tracking-tight">Kabinary Joomla Modules</span>
+        </div>
+        <p class="text-[14.5px] leading-relaxed">Premium Joomla modules and extensions. Multilingual, RTL-ready, and crafted with care.</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <p class="eyebrow text-white/50 mb-3">Modules</p>
+          <ul class="flex flex-col gap-2 text-[14.5px]">
+            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" class="text-white/75 hover:text-white transition-colors">Member Directory · Demo</a></li>
+            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="text-white/75 hover:text-white transition-colors">Member Directory · License</a></li>
+            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="text-white/75 hover:text-white transition-colors">Installation guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-white/50 mb-3">Contact</p>
+          <ul class="flex flex-col gap-2 text-[14.5px]">
+            <li>
+              <a [href]="'mailto:' + contactEmail" class="text-white/75 hover:text-signal transition-colors">{{ contactEmail }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+    <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-[13px] text-white/55">© {{ currentYear }} Kabinary LLC. All rights reserved.</p>
+      <p class="text-[13px] text-white/55">Crafted with care for the Joomla community.</p>
+    </div>
+  </div>
 </footer>

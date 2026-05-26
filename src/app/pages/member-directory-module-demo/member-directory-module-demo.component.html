@@ -1,25 +1,55 @@
-<main class="container mx-auto py-8">
-    <p class="text-gray-600">Below is a live example of the module in action.</p>
-    <div class="flex w-full justify-center py-5">
-        <img appZoomable src="img/member-directory-module/member-directory-demo.gif" alt="Member Directory Module Demo" class="w-full md:w-3/4 lg:w-1/2">
+<section class="band band-soft">
+  <div class="container-x flex flex-col gap-10">
+    <div class="flex flex-col gap-4 max-w-2xl">
+      <span class="eyebrow">Member Directory Module · Demo</span>
+      <h1 class="text-h1">A clear, modern directory of your members.</h1>
+      <p class="text-lede">Real-time search, responsive layout, integrated stats. Below is the module rendering live data on a sample site.</p>
     </div>
-    
-    <h2 class="text-2xl font-bold mt-8">Module Description</h2>
-    <p class="mt-4">This module is designed to display a clear and modern directory of registered members on your website. It's perfect for communities, associations, or any site that requires a professional presentation of its members.</p>
-    
-    <h3 class="text-xl font-semibold mt-6">Key Features:</h3>
-    <ul class="list-disc list-inside mt-4">
-        <li><strong>Real-time Search:</strong> Quickly find members by searching names or email addresses using an intuitive search bar.</li>
-        <li><strong>Clean and Responsive Layout:</strong> A modern design optimized for all devices, ensuring the best user experience.</li>
-        <li><strong>Comprehensive Member Details:</strong> Each member is displayed with their name, email, phone number, address, and region.</li>
-        <li><strong>Integrated Statistics:</strong> Display the total number of users for an instant overview.</li>
+
+    <div class="flex justify-center">
+      <div class="card card-elevated p-3 max-w-3xl w-full">
+        <img appZoomable
+             src="img/member-directory-module/member-directory-demo.gif"
+             alt="Member Directory Module Demo"
+             class="rounded-[10px] w-full">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container-x grid lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
+    <div class="flex flex-col gap-3 max-w-md">
+      <span class="eyebrow">Module description</span>
+      <h2 class="text-h2">Built for communities and associations.</h2>
+      <p class="text-body text-sand-500">A clear and modern directory of registered members. Perfect for communities, associations, or any site that needs a professional presentation of its members.</p>
+    </div>
+
+    <ul class="grid sm:grid-cols-2 gap-4">
+      <li class="card card-padded flex flex-col gap-2">
+        <span class="eyebrow accent">Real-time search</span>
+        <p class="text-body">Quickly find members by searching names or email addresses using an intuitive search bar.</p>
+      </li>
+      <li class="card card-padded flex flex-col gap-2">
+        <span class="eyebrow accent">Responsive layout</span>
+        <p class="text-body">A modern design optimized for all devices, ensuring the best user experience.</p>
+      </li>
+      <li class="card card-padded flex flex-col gap-2">
+        <span class="eyebrow accent">Comprehensive details</span>
+        <p class="text-body">Each member is displayed with their name, email, phone number, address, and region.</p>
+      </li>
+      <li class="card card-padded flex flex-col gap-2">
+        <span class="eyebrow accent">Integrated stats</span>
+        <p class="text-body">Display the total number of users for an instant overview.</p>
+      </li>
     </ul>
+  </div>
+</section>
 
-    <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-center gap-5">
-        <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
-        <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" [type]="'Blue'" [text]="'Installation Guide'"></app-button>  
-        <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" [type]="'Green'" [text]="'Get a License'"></app-button>
-    </div>
-</main>
-
-
+<section class="band band-soft-2">
+  <div class="container-x flex flex-col sm:flex-row items-center justify-center gap-3">
+    <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Ghost'" [text]="'Back to Home'"></app-button>
+    <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" [type]="'Secondary'" [text]="'Installation Guide'"></app-button>
+    <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" [type]="'Primary'" [text]="'Get a License'"></app-button>
+  </div>
+</section>
