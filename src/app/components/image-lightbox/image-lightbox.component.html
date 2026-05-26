@@ -1,0 +1,11 @@
+<div *ngIf="state().open"
+     class="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 cursor-zoom-out"
+     (click)="close()">
+  <button type="button"
+          (click)="$event.stopPropagation(); close()"
+          class="absolute top-4 right-4 text-white text-4xl leading-none hover:opacity-70 focus:outline-none"
+          aria-label="Close">&times;</button>
+  <img [src]="state().src" [alt]="state().alt"
+       (click)="$event.stopPropagation()"
+       class="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl rounded-md cursor-default">
+</div>
