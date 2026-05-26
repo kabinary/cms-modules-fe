@@ -1,14 +1,14 @@
-<header class="sticky top-0 z-40 backdrop-blur-md backdrop-saturate-150 bg-white/75 border-b border-ink/[0.06]">
-  <div class="container-x flex items-center justify-between h-[68px]">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-sand-200 transition-colors duration-300">
+  <div class="container-x flex items-center justify-between py-4">
     <a [routerLink]="'/' + appRoutes.HOME" class="flex items-center" (click)="closeMenu()" aria-label="Kabinary home">
-      <img src="kabinary_logo_light_mode.png" alt="Kabinary" class="h-10 w-auto" />
+      <img src="kabinary_logo_light_mode.png" alt="Kabinary" class="h-12 w-auto" />
     </a>
 
-    <nav class="hidden md:flex items-center gap-7 text-[14.5px] text-ink/80">
-      <a [routerLink]="'/' + appRoutes.HOME" class="hover:text-indigo-600 transition-colors">Home</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" class="hover:text-indigo-600 transition-colors">Demo</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="hover:text-indigo-600 transition-colors">Installation</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="btn btn-primary btn-sm">Get a License</a>
+    <nav class="hidden md:flex items-center gap-2">
+      <a [routerLink]="'/' + appRoutes.HOME" class="px-3 py-2 text-sm font-medium text-sand-700 hover:text-indigo-600 transition-colors">Home</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" class="px-3 py-2 text-sm font-medium text-sand-700 hover:text-indigo-600 transition-colors">Demo</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="px-3 py-2 text-sm font-medium text-sand-700 hover:text-indigo-600 transition-colors">Installation</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="btn btn-primary btn-sm ml-2">Get a License</a>
     </nav>
 
     <button type="button"
@@ -21,11 +21,11 @@
     </button>
   </div>
 
-  <div *ngIf="isMenuOpen" class="md:hidden border-t border-ink/[0.06] bg-white/95 backdrop-blur-md">
+  <div *ngIf="isMenuOpen" class="md:hidden border-t border-sand-200 bg-white">
     <div class="container-x flex flex-col gap-1 py-3">
-      <a [routerLink]="'/' + appRoutes.HOME" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-ink hover:bg-sand-100">Home</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-ink hover:bg-sand-100">Demo</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-ink hover:bg-sand-100">Installation</a>
+      <a [routerLink]="'/' + appRoutes.HOME" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Home</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Demo</a>
+      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Installation</a>
       <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" (click)="closeMenu()" class="btn btn-primary btn-md mt-1">Get a License</a>
     </div>
   </div>

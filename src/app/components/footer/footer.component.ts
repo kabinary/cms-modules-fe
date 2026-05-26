@@ -11,4 +11,5 @@ export class FooterComponent {
   readonly appRoutes = AppRoutes;
   contactEmail: string = 'contact@kabinary.com';
   currentYear: number = new Date().getFullYear();
+  tagline: string = 'Premium Joomla modules and extensions, crafted with care.';
 }

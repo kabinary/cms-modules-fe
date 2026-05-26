@@ -1,36 +1,34 @@
-<footer class="bg-indigo-950 text-white/75">
+<footer class="bg-sand-100 border-t border-sand-200 mt-auto">
   <div class="container-x py-14">
-    <div class="grid gap-10 md:grid-cols-2 items-start">
-      <div class="flex flex-col gap-4 max-w-md">
+    <div class="grid gap-10 md:grid-cols-3 mb-10">
+
+      <div class="flex flex-col gap-4 max-w-xs">
         <a [routerLink]="'/' + appRoutes.HOME" class="inline-flex" aria-label="Kabinary home">
-          <img src="kabinary_logo_dark_mode.png" alt="Kabinary" class="h-10 w-auto" />
+          <img src="kabinary_logo_light_mode.png" alt="Kabinary" class="h-12 w-auto" />
         </a>
-        <p class="text-[14.5px] leading-relaxed">Premium Joomla modules and extensions. Multilingual, RTL-ready, and crafted with care.</p>
+        <p class="text-body text-sand-500">{{ tagline }}</p>
       </div>
 
-      <div class="grid grid-cols-2 gap-8">
-        <div>
-          <p class="eyebrow text-white/50 mb-3">Modules</p>
-          <ul class="flex flex-col gap-2 text-[14.5px]">
-            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" class="text-white/75 hover:text-white transition-colors">Member Directory · Demo</a></li>
-            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="text-white/75 hover:text-white transition-colors">Member Directory · License</a></li>
-            <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="text-white/75 hover:text-white transition-colors">Installation guide</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="eyebrow text-white/50 mb-3">Contact</p>
-          <ul class="flex flex-col gap-2 text-[14.5px]">
-            <li>
-              <a [href]="'mailto:' + contactEmail" class="text-white/75 hover:text-signal transition-colors">{{ contactEmail }}</a>
-            </li>
-          </ul>
-        </div>
+      <div>
+        <p class="eyebrow mb-4">Modules</p>
+        <ul class="flex flex-col gap-2 text-body">
+          <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" class="text-ink hover:text-indigo-600 transition-colors">Member Directory · Demo</a></li>
+          <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" class="text-ink hover:text-indigo-600 transition-colors">Member Directory · License</a></li>
+          <li><a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" class="text-ink hover:text-indigo-600 transition-colors">Installation guide</a></li>
+        </ul>
       </div>
+
+      <div>
+        <p class="eyebrow mb-4">Contact</p>
+        <ul class="flex flex-col gap-2 text-body">
+          <li><a [href]="'mailto:' + contactEmail" class="text-ink hover:text-indigo-600 transition-colors">{{ contactEmail }}</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-[13px] text-white/55">© {{ currentYear }} Kabinary LLC. All rights reserved.</p>
-      <p class="text-[13px] text-white/55">Crafted with care for the Joomla community.</p>
+    <div class="pt-8 border-t border-sand-200">
+      <p class="text-sm text-sand-500">© {{ currentYear }} Kabinary LLC. All rights reserved.</p>
     </div>
   </div>
 </footer>
