@@ -1,54 +1,60 @@
-<div class="flex flex-col p-4 gap-3">
-    <app-module-installation-guide 
-        [moduleName]="moduleName"
-        [moduleDemoRoute]="appRoutes.MEMBER_DIRECTORY_MODULE_DEMO"
-        [moduleLicenseRoute]="appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE">
-        <app-collapsible-panel title="Set up the fields to display">
-            <ol>
-                <li>
-                    Make sure to enable the native Joomla <strong>User - Profile</strong> plugin. This is required for the module to work properly.
-                    <ul>
-                        <li >
-                            Navigate to <strong>System</strong> &gt; <strong>Plugins</strong>
-                            <img appZoomable src="img/joomla-admin-panel/system-plugins.png" alt="Joomla Admin Panel Plugins">
-                        </li>
-                        <li>
-                            Search for the <strong>User - Profile</strong> plugin and click on it.
-                            <img appZoomable src="img/joomla-admin-panel/system-plugins-user_profile.png" alt="Joomla Admin Panel User Profile Plugin on Plugins List">
-                        </li>
-                        <li>
-                            Make sure to have the <i>Status</i> set to <strong>Enabled</strong> and activate the fields you want to use.
-                            <img appZoomable src="img/joomla-admin-panel/user-profile.png" alt="User - Profile Plugin Settings" class="img-fluid mt-2 rounded-md shadow-md">
-                        </li>
-                        <li>
-                            Click on <strong>Save & Close</strong> button to save your changes.
-                        </li>
-                    </ul>
-                </li>        
-                <li>
-                    Navigate to <strong>Content</strong> &gt; <strong>Site Modules</strong>, search the module and click on it.
-                    <img appZoomable src="img/joomla-admin-panel/search-module.png" alt="Joomla Admin Panel Modules" class="img-fluid mt-4 rounded-md shadow-md">
-                </li>
-                <li>
-                    On <strong>Fields Configuration</strong> tab, you can add, edit, remove, or rearrange the fields as you like. Only the fields defined in Joomla's native 'User - Profile' plugin are supported.
-                    <img appZoomable src="img/joomla-admin-panel/module-fields.png" alt="Joomla Admin Panel Module Fields" class="img-fluid mt-2 rounded-md shadow-md">
-                    <p class="mt-2"> 
-                        This module supports only fields declared in the native Joomla <strong>User - Profile</strong> plugin. 
-                        <br>
-                        If you want to add others custom fields, you can do it by storing the values into <strong>#__user_profiles</strong> table of your database.
-                    </p>
-                    <p>
-                        For more icons, please visit 
-                        <a [href]="fontAwesomeUrl" class="anchor">Font awesome</a>
-                    </p>
-                </li>    
-                <li>
-                    Click on <strong>Save & Close</strong> button to save your changes.
-                </li>    
-            </ol>
-            <p class="mt-6 text-center">You should now see the module displayed on the concerning pages.</p>
-        </app-collapsible-panel>
-    </app-module-installation-guide>
-</div>
+<app-module-installation-guide
+  [moduleName]="moduleName"
+  [moduleDemoRoute]="appRoutes.MEMBER_DIRECTORY_MODULE_DEMO"
+  [moduleLicenseRoute]="appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE">
 
+  <app-collapsible-panel title="Set up the fields to display">
+    <ol class="flex flex-col gap-6 mt-4">
+      <li class="flex gap-5">
+        <span class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-card bg-indigo-50 text-indigo-600 font-semibold">1</span>
+        <div class="flex flex-col gap-3 text-body flex-1">
+          <p>Make sure to enable the native Joomla <strong>User - Profile</strong> plugin. This is required for the module to work properly.</p>
 
+          <div class="card card-padded bg-sand-50 flex flex-col gap-3">
+            <p class="text-body">Navigate to <strong>System</strong> &gt; <strong>Plugins</strong>.</p>
+            <img appZoomable src="img/joomla-admin-panel/system-plugins.png" alt="Joomla Admin Panel Plugins" class="rounded-[10px] shadow-soft">
+          </div>
+          <div class="card card-padded bg-sand-50 flex flex-col gap-3">
+            <p class="text-body">Search for the <strong>User - Profile</strong> plugin and click on it.</p>
+            <img appZoomable src="img/joomla-admin-panel/system-plugins-user_profile.png" alt="Joomla Admin Panel User Profile Plugin on Plugins List" class="rounded-[10px] shadow-soft">
+          </div>
+          <div class="card card-padded bg-sand-50 flex flex-col gap-3">
+            <p class="text-body">Set the <em>Status</em> to <strong>Enabled</strong> and activate the fields you want to use.</p>
+            <img appZoomable src="img/joomla-admin-panel/user-profile.png" alt="User - Profile Plugin Settings" class="rounded-[10px] shadow-soft">
+          </div>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-card bg-indigo-50 text-indigo-600 font-semibold">2</span>
+        <div class="flex flex-col gap-3 text-body flex-1">
+          <p>Navigate to <strong>Content</strong> &gt; <strong>Site Modules</strong>, search the module, and click on it.</p>
+          <img appZoomable src="img/joomla-admin-panel/search-module.png" alt="Joomla Admin Panel Modules" class="rounded-[10px] shadow-soft">
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-card bg-indigo-50 text-indigo-600 font-semibold">3</span>
+        <div class="flex flex-col gap-3 text-body flex-1">
+          <p>On the <strong>Fields Configuration</strong> tab, you can add, edit, remove, or rearrange the fields as you like. Only the fields defined in Joomla's native <em>User - Profile</em> plugin are supported.</p>
+          <img appZoomable src="img/joomla-admin-panel/module-fields.png" alt="Joomla Admin Panel Module Fields" class="rounded-[10px] shadow-soft">
+
+          <div class="rounded-card border border-signal-200 bg-signal-50 text-signal-700 px-4 py-3 text-[14px]">
+            <strong>Note.</strong> Only fields declared in the native Joomla <strong>User - Profile</strong> plugin are supported. To use other custom fields, store their values in the <strong>#__user_profiles</strong> table of your database.
+          </div>
+
+          <p>For more icons, visit <a [href]="fontAwesomeUrl" class="anchor" target="_blank" rel="noopener">Font Awesome</a>.</p>
+        </div>
+      </li>
+
+      <li class="flex gap-5">
+        <span class="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-card bg-indigo-50 text-indigo-600 font-semibold">4</span>
+        <div class="flex flex-col gap-3 text-body flex-1">
+          <p>Click <strong>Save &amp; Close</strong> to save your changes.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="mt-8 text-center text-body text-sand-500">You should now see the module displayed on the configured pages.</p>
+  </app-collapsible-panel>
+</app-module-installation-guide>
