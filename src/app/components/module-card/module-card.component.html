@@ -1,7 +1,8 @@
 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-    <img 
-    [src]="module?.imageSrc" 
-    [alt]="module?.imageAlt" 
+    <img
+    appZoomable
+    [src]="module?.imageSrc"
+    [alt]="module?.imageAlt"
     class="w-full h-48 object-cover">
     <div class="p-4">
         <h2 class="text-xl font-semibold">{{module?.title}}</h2>
