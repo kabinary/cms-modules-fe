@@ -1,16 +1,20 @@
-<div class="bg-white shadow-md rounded-lg overflow-hidden">
+<div class="card overflow-hidden hover:shadow-card transition-shadow duration-200 flex flex-col">
+  <div class="aspect-[4/3] overflow-hidden bg-sand-100">
     <img
-    appZoomable
-    [src]="module?.imageSrc"
-    [alt]="module?.imageAlt"
-    class="w-full h-48 object-cover">
-    <div class="p-4">
-        <h2 class="text-xl font-semibold">{{module?.title}}</h2>
-        <p class="mt-2 text-gray-700">{{module?.description}}</p>
-        <div class="mt-4 gap-3 flex items-center">
-            <app-button [routerLink]="'/' +module?.buylink" [type]="'Green'" [text]="'Get a License'"></app-button>
-            <app-button [routerLink]="'/' + module?.demoLink" [type]="'Blue'" [text]="'Demo'"></app-button>  
-            <app-button [routerLink]="'/' +module?.installationGuideLink" [type]="'Gray'" [text]="'Installation Guide'"></app-button>
-        </div>
+      appZoomable
+      [src]="module?.imageSrc"
+      [alt]="module?.imageAlt"
+      class="w-full h-full object-cover">
+  </div>
+  <div class="p-6 flex flex-col gap-4 flex-1">
+    <div class="flex flex-col gap-2 flex-1">
+      <h3 class="text-h3">{{ module?.title }}</h3>
+      <p class="text-body text-sand-500">{{ module?.description }}</p>
     </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <app-button [routerLink]="'/' + module?.buylink" [type]="'Primary'" [size]="'sm'" [text]="'Get a License'"></app-button>
+      <app-button [routerLink]="'/' + module?.demoLink" [type]="'Secondary'" [size]="'sm'" [text]="'Demo'"></app-button>
+      <app-button [routerLink]="'/' + module?.installationGuideLink" [type]="'Ghost'" [size]="'sm'" [text]="'Installation'"></app-button>
+    </div>
+  </div>
 </div>

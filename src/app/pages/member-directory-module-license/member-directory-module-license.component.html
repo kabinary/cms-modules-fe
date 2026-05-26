@@ -1,18 +1,64 @@
-<div class="flex flex-col gap-10 p-5 sm:p-10">
-  <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
-    <stripe-buy-button name="Member Directory Module - 1 Year License"
-      buy-button-id="buy_btn_1TbNjSQCWQgJswssGB5Ev8ro"
-      publishable-key="pk_live_51TbMpSQCWQgJswssK9djxyOpGuyB9bVsXhWE7jLFQzorSmEg8vN2uaLf04zkAbOKdZNYPIuNXIET3ZWkmdTbOBJp00gcRZF4Z6">
-    </stripe-buy-button>
-    <stripe-buy-button name="Member Directory Module - 1 Month Free Trial License"
-      buy-button-id="buy_btn_1TbNXoQCWQgJswssB3QAC6ik"
-      publishable-key="pk_live_51TbMpSQCWQgJswssK9djxyOpGuyB9bVsXhWE7jLFQzorSmEg8vN2uaLf04zkAbOKdZNYPIuNXIET3ZWkmdTbOBJp00gcRZF4Z6">
-    </stripe-buy-button>
-  </div>
+<section class="band band-soft">
+  <div class="container-x flex flex-col gap-10">
+    <div class="flex flex-col gap-4 max-w-2xl mx-auto text-center items-center">
+      <span class="eyebrow">Member Directory Module · License</span>
+      <h1 class="text-h1">Choose your plan.</h1>
+      <p class="text-lede">Start free for a month, then upgrade to keep the module running.</p>
+    </div>
 
-  <div class="mt-8 flex items-center justify-center gap-5">
-    <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Gray'" [text]="'Back to Home'"></app-button>
-    <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" [type]="'Blue'" [text]="'Demo'"></app-button>  
-    <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" [type]="'Green'" [text]="'Installation Guide'"></app-button>
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto w-full">
+      <!-- Free trial -->
+      <div class="card card-padded flex flex-col gap-5">
+        <div class="flex flex-col gap-1">
+          <span class="eyebrow">Free trial</span>
+          <h2 class="text-h3">1 month</h2>
+        </div>
+        <div class="flex items-baseline gap-1">
+          <span class="text-stat-xl">€0</span>
+          <span class="text-caption">for 30 days</span>
+        </div>
+        <ul class="flex flex-col gap-2 text-body">
+          <li class="flex gap-2"><span class="accent">✓</span> Full module features</li>
+          <li class="flex gap-2"><span class="accent">✓</span> Email support</li>
+          <li class="flex gap-2"><span class="accent">✓</span> No credit card lock-in</li>
+        </ul>
+        <div class="pt-2 flex justify-center">
+          <stripe-buy-button name="Member Directory Module - 1 Month Free Trial License"
+            buy-button-id="buy_btn_1TbNXoQCWQgJswssB3QAC6ik"
+            publishable-key="pk_live_51TbMpSQCWQgJswssK9djxyOpGuyB9bVsXhWE7jLFQzorSmEg8vN2uaLf04zkAbOKdZNYPIuNXIET3ZWkmdTbOBJp00gcRZF4Z6">
+          </stripe-buy-button>
+        </div>
+      </div>
+
+      <!-- 1 year license (featured) -->
+      <div class="card card-padded relative flex flex-col gap-5 ring-2 ring-indigo-600 shadow-lift">
+        <span class="absolute -top-3 left-6 inline-flex items-center gap-1 px-2.5 py-1 rounded-chip bg-indigo-600 text-white text-[11px] font-semibold tracking-wider uppercase">Most popular</span>
+        <div class="flex flex-col gap-1">
+          <span class="eyebrow accent">Full license</span>
+          <h2 class="text-h3">1 year</h2>
+        </div>
+        <div class="flex items-baseline gap-1">
+          <span class="text-stat-xl">€54.90</span>
+          <span class="text-caption">/ year</span>
+        </div>
+        <ul class="flex flex-col gap-2 text-body">
+          <li class="flex gap-2"><span class="accent">✓</span> Production use, unlimited sites</li>
+          <li class="flex gap-2"><span class="accent">✓</span> 12 months of updates</li>
+          <li class="flex gap-2"><span class="accent">✓</span> Priority email support</li>
+        </ul>
+        <div class="pt-2 flex justify-center">
+          <stripe-buy-button name="Member Directory Module - 1 Year License"
+            buy-button-id="buy_btn_1TbNjSQCWQgJswssGB5Ev8ro"
+            publishable-key="pk_live_51TbMpSQCWQgJswssK9djxyOpGuyB9bVsXhWE7jLFQzorSmEg8vN2uaLf04zkAbOKdZNYPIuNXIET3ZWkmdTbOBJp00gcRZF4Z6">
+          </stripe-buy-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+      <app-button [routerLink]="'/' + appRoutes.HOME" [type]="'Ghost'" [text]="'Back to Home'"></app-button>
+      <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" [type]="'Secondary'" [text]="'See the demo'"></app-button>
+      <app-button [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" [type]="'Secondary'" [text]="'Installation guide'"></app-button>
+    </div>
   </div>
-</div>
+</section>
