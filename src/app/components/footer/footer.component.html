@@ -2,10 +2,9 @@
   <div class="container-x py-14">
     <div class="grid gap-10 md:grid-cols-2 items-start">
       <div class="flex flex-col gap-4 max-w-md">
-        <div class="flex items-center gap-3">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-card bg-white text-indigo-600 font-semibold text-base">K</span>
-          <span class="font-semibold text-[17px] text-white tracking-tight">Kabinary Joomla Modules</span>
-        </div>
+        <a [routerLink]="'/' + appRoutes.HOME" class="inline-flex" aria-label="Kabinary home">
+          <img src="kabinary_logo_dark_mode.png" alt="Kabinary" class="h-10 w-auto" />
+        </a>
         <p class="text-[14.5px] leading-relaxed">Premium Joomla modules and extensions. Multilingual, RTL-ready, and crafted with care.</p>
       </div>
 

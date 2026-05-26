@@ -1,8 +1,7 @@
 <header class="sticky top-0 z-40 backdrop-blur-md backdrop-saturate-150 bg-white/75 border-b border-ink/[0.06]">
   <div class="container-x flex items-center justify-between h-[68px]">
-    <a [routerLink]="'/' + appRoutes.HOME" class="flex items-center gap-3 group" (click)="closeMenu()">
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-card bg-indigo-600 text-white font-semibold text-base shadow-soft group-hover:bg-indigo-700 transition-colors">K</span>
-      <span class="font-semibold text-[17px] tracking-tight text-ink">Kabinary Joomla Modules</span>
+    <a [routerLink]="'/' + appRoutes.HOME" class="flex items-center" (click)="closeMenu()" aria-label="Kabinary home">
+      <img src="kabinary_logo_light_mode.png" alt="Kabinary" class="h-10 w-auto" />
     </a>
 
     <nav class="hidden md:flex items-center gap-7 text-[14.5px] text-ink/80">
