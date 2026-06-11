@@ -25,6 +25,10 @@ npm run build          # production build → dist/cms-modules-fe/browser
 npx ng deploy          # build + publish to gh-pages branch
 ```
 
+## Deployment
+
+There is no CI on this repo: merging to `main` does **not** deploy. Run `npx ng deploy` manually after merging — it builds in production mode and pushes the output to the `gh-pages` branch, served at [modules.kabinary.com](https://modules.kabinary.com). The custom domain is preserved across deploys by [`public/CNAME`](public/CNAME), which ships with the build output.
+
 ## Project structure
 
 - `src/app/components/` — shared UI components (`app-button`, `app-header`, `app-footer`, `app-module-card`, `app-collapsible-panel`, `app-image-lightbox`)
@@ -34,4 +38,4 @@ npx ng deploy          # build + publish to gh-pages branch
 
 ## Live
 
-Deployed to GitHub Pages from the `gh-pages` branch.
+[modules.kabinary.com](https://modules.kabinary.com) — GitHub Pages, served from the `gh-pages` branch.
