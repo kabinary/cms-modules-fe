@@ -5,7 +5,9 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
     </svg>
   </button>
-  <div *ngIf="open" class="px-6 pb-6 pt-2 border-t border-sand-200">
-    <ng-content></ng-content>
-  </div>
+  @if (open) {
+    <div class="px-6 pb-6 pt-2 border-t border-sand-200">
+      <ng-content></ng-content>
+    </div>
+  }
 </div>

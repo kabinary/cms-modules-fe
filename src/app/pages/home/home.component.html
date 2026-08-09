@@ -21,9 +21,9 @@
         <div class="absolute -inset-8 bg-indigo-100 rounded-card blur-2xl opacity-60"></div>
         <div class="relative card card-elevated p-2 bg-white">
           <img src="img/member-directory-module/member-directory-desktop-01.png"
-               alt="Member Directory preview"
-               appZoomable
-               class="rounded-[10px] w-full max-w-md">
+            alt="Member Directory preview"
+            appZoomable
+            class="rounded-[10px] w-full max-w-md">
         </div>
       </div>
     </div>
@@ -39,7 +39,9 @@
       <p class="text-lede">Each module ships with a demo, an installation guide, and a license you can trial for a month.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <app-module-card *ngFor="let module of modules" [module]="module"></app-module-card>
+      @for (module of modules; track module) {
+        <app-module-card [module]="module"></app-module-card>
+      }
     </div>
   </div>
 </section>

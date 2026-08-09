@@ -26,10 +26,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('cms-modules-fe');
   });
 
-  it('should render title', () => {
+  it('should render the app shell', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, cms-modules-fe');
+    expect(compiled.querySelector('app-header')).toBeTruthy();
+    expect(compiled.querySelector('main router-outlet')).toBeTruthy();
+    expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
 });

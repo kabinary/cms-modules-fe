@@ -12,21 +12,27 @@
     </nav>
 
     <button type="button"
-            (click)="toggleMenu()"
-            class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-btn text-ink hover:bg-sand-100"
-            [attr.aria-expanded]="isMenuOpen"
-            aria-label="Toggle navigation menu">
-      <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-      <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      (click)="toggleMenu()"
+      class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-btn text-ink hover:bg-sand-100"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu">
+      @if (!isMenuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      }
+      @if (isMenuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      }
     </button>
   </div>
 
-  <div *ngIf="isMenuOpen" class="md:hidden border-t border-sand-200 bg-white">
-    <div class="container-x flex flex-col gap-1 py-3">
-      <a [routerLink]="'/' + appRoutes.HOME" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Home</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Demo</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Installation</a>
-      <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" (click)="closeMenu()" class="btn btn-primary btn-md mt-1">Get a License</a>
+  @if (isMenuOpen) {
+    <div class="md:hidden border-t border-sand-200 bg-white">
+      <div class="container-x flex flex-col gap-1 py-3">
+        <a [routerLink]="'/' + appRoutes.HOME" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Home</a>
+        <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_DEMO" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Demo</a>
+        <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_INSTALLATION_GUIDE" (click)="closeMenu()" class="block px-3 py-3 rounded-btn text-sm font-medium text-sand-700 hover:bg-sand-100 hover:text-indigo-600 transition-colors">Installation</a>
+        <a [routerLink]="'/' + appRoutes.MEMBER_DIRECTORY_MODULE_LICENSE" (click)="closeMenu()" class="btn btn-primary btn-md mt-1">Get a License</a>
+      </div>
     </div>
-  </div>
+  }
 </header>
