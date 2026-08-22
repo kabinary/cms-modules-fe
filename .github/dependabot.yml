@@ -1,0 +1,37 @@
+version: 2
+updates:
+  # Pas de target-branch : ce repo n'a pas de branche develop, les PR vont sur main.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    groups:
+      # Angular publie core / cli / build-angular sur la même cadence et les
+      # peer deps se pinnent mutuellement. Les grouper évite les PR qui
+      # échouent isolément sur un conflit de peer dependency.
+      angular:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "@angular/build"
+          - "typescript"
+          - "tslib"
+          - "zone.js"
+      # Catch-all : minor + patch dans une seule PR. Les majeures restent
+      # individuelles pour être relues à la main.
+      minor-and-patch:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "typescript"
+          - "tslib"
+          - "zone.js"
+        update-types:
+          - "minor"
+          - "patch"
