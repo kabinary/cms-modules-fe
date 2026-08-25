@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AppRoutes } from '../../enums/AppRoutes.enum';
 
 @Component({
   selector: 'app-footer',
   standalone: false,
   templateUrl: './footer.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Module } from '../../models/Module';
 import { AppRoutes } from '../../enums/AppRoutes.enum';
 
@@ -7,6 +7,7 @@ import { AppRoutes } from '../../enums/AppRoutes.enum';
   standalone: false,
   
   templateUrl: './module-card.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './module-card.component.css'
 })
 export class ModuleCardComponent {

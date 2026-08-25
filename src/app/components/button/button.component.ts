@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 export type ButtonType =
   | 'Primary' | 'Secondary' | 'Ghost' | 'GhostDark'
@@ -18,6 +18,7 @@ const LEGACY_MAP: Record<string, string> = {
   selector: 'app-button',
   standalone: false,
   templateUrl: './button.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {

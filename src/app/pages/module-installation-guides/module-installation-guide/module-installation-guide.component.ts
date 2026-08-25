@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { AppRoutes } from '../../../enums/AppRoutes.enum';
 
 @Component({
@@ -6,6 +6,7 @@ import { AppRoutes } from '../../../enums/AppRoutes.enum';
   standalone: false,
   
   templateUrl: './module-installation-guide.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './module-installation-guide.component.css'
 })
 export class ModuleInstallationGuideComponent {
