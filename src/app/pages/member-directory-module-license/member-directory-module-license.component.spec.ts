@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MemberDirectoryModuleLicenseComponent } from './member-directory-module-license.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppModule } from '../../app.module';
 
 describe('MemberDirectoryModuleLicenseComponent', () => {
   let component: MemberDirectoryModuleLicenseComponent;
@@ -8,7 +10,7 @@ describe('MemberDirectoryModuleLicenseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MemberDirectoryModuleLicenseComponent]
+      imports: [AppModule, RouterTestingModule]
     })
     .compileComponents();
 

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModuleInstallationGuideComponent } from './module-installation-guide.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppModule } from '../../../app.module';
 
 describe('ModuleInstallationGuideComponent', () => {
   let component: ModuleInstallationGuideComponent;
@@ -8,7 +10,7 @@ describe('ModuleInstallationGuideComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ModuleInstallationGuideComponent]
+      imports: [AppModule, RouterTestingModule]
     })
     .compileComponents();
 
