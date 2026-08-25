@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { __importDefault } from 'tslib';
 
 @Component({
@@ -6,6 +6,7 @@ import { __importDefault } from 'tslib';
   standalone: false,
   
   templateUrl: './collapsible-panel.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './collapsible-panel.component.css'
 })
 export class CollapsiblePanelComponent {

@@ -1,10 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { AppRoutes } from '../../enums/AppRoutes.enum';
 
 @Component({
   selector: 'app-header',
   standalone: false,
   templateUrl: './header.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
