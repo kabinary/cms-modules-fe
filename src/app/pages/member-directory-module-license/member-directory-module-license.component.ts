@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AppRoutes } from '../../enums/AppRoutes.enum';
 
 @Component({
@@ -6,6 +6,7 @@ import { AppRoutes } from '../../enums/AppRoutes.enum';
   standalone: false,
   
   templateUrl: './member-directory-module-license.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './member-directory-module-license.component.css'
 })
 export class MemberDirectoryModuleLicenseComponent {

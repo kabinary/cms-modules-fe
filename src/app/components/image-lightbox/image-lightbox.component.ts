@@ -1,9 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { ImageLightboxService } from './image-lightbox.service';
 
 @Component({
   selector: 'app-image-lightbox',
   standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './image-lightbox.component.html'
 })
 export class ImageLightboxComponent {
